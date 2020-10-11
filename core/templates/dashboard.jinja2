@@ -1,0 +1,59 @@
+{% extends "layout.jinja2" %}
+{% block title %}Xi-IoT{% endblock %}
+
+
+{% block content %}
+
+    <!-- Header -->
+    <header class="bg-primary py-5 mb-5">
+        <div class="container h-100">
+            <div class="row h-100 align-items-center">
+                <div class="col-lg-12">
+                    <h1 class="display-4 text-white mt-5 mb-2">Demo App running on Nutanix</h1>
+                    <p class="lead mb-5 text-white-50">Full CI/CD pipeline example running on Nutanix</p>
+                    <p class="text-white">Version: {{ version }}, Server Address: {{ ip_address }}</p>
+                </div>
+            </div>
+        </div>
+    </header>
+
+    <div class="container">
+        <form method="POST" action="{{ url_for('dashboard') }}">
+            {{ form.csrf_token }}
+
+            <div class="form-group row">
+                <label for="name" class="col-sm-2 col-form-label">Name</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="name" name="name" value="">
+                </div>
+            </div>
+
+            <div class="form-group row">
+                <label for="description" class="col-sm-2 col-form-label">Description</label>
+                <div class="col-sm-10">
+                    <input type="text" class="form-control" id="description" name="description">
+                </div>
+            </div>
+
+            <button type="submit" id="submit" name="submit" class="btn btn-primary mb-2">Add</button>
+        </form>
+
+
+        <div class="row mt-5">
+
+            {% for task in tasks %}
+                <div class="col-3">
+                    <div class="card border-primary  mb-3" style="max-width: 18rem;">
+                        <div class="card-header">{{ task.name }}</div>
+                        <div class="card-body text-primary">
+                            <p class="card-text">{{ task.description }}</p>
+                        </div>
+                    </div>
+                </div>
+            {% endfor %}
+        </div>
+    </div>
+
+
+
+{% endblock %}
