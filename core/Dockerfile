@@ -9,15 +9,16 @@ RUN echo "UTC" >> /etc/timezone
 RUN apk del tzdata
 #
 ## install gevent
-RUN apk add --no-cache --virtual .build-deps \
+#RUN apk add --no-cache --virtual .build-deps \
+RUN apk add --no-cache \
     python3-dev \
     postgresql-dev \
     gcc  \
     musl-dev \
     make \
     && pip install --upgrade pip \
-    && pip install --no-cache-dir psycopg2-binary \
-    && apk del .build-deps
+    && pip install --no-cache-dir psycopg2-binary
+#    && apk del .build-deps
 
 # application folder
 RUN mkdir /app
