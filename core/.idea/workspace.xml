@@ -2,15 +2,13 @@
 <project version="4">
   <component name="ChangeListManager">
     <list default="true" id="bfac4829-4692-4e26-954b-10d5cb9710a1" name="Default Changelist" comment="">
-      <change afterPath="$PROJECT_DIR$/.idea/core.iml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.local.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/dataSources.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/Project_Default.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/inspectionProfiles/profiles_settings.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/misc.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/modules.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/vcs.xml" afterDir="false" />
-      <change afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/odbc_dsn.ini" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/.idea/workspace.xml" beforeDir="false" afterPath="$PROJECT_DIR$/.idea/workspace.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/Dockerfile" beforeDir="false" afterPath="$PROJECT_DIR$/Dockerfile" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/app.py" beforeDir="false" afterPath="$PROJECT_DIR$/app.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/config.py" beforeDir="false" afterPath="$PROJECT_DIR$/config.py" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/requirements.txt" beforeDir="false" afterPath="$PROJECT_DIR$/requirements.txt" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/templates/dashboard.jinja2" beforeDir="false" afterPath="$PROJECT_DIR$/templates/dashboard.jinja2" afterDir="false" />
     </list>
     <option name="SHOW_DIALOG" value="false" />
     <option name="HIGHLIGHT_CONFLICTS" value="true" />
@@ -49,7 +47,7 @@
   <component name="PropertiesComponent">
     <property name="RunOnceActivity.OpenProjectViewOnStart" value="true" />
     <property name="WebServerToolWindowFactoryState" value="false" />
-    <property name="last_opened_file_path" value="$PROJECT_DIR$/wsgi.py" />
+    <property name="last_opened_file_path" value="$PROJECT_DIR$/../../barcode-tracker-ui" />
     <property name="restartRequiresConfirmation" value="false" />
     <property name="settings.editor.selected.configurable" value="preferences.lookFeel" />
   </component>
@@ -59,7 +57,7 @@
       <recent name="$PROJECT_DIR$/application" />
     </key>
   </component>
-  <component name="RunManager" selected="Flask server.wsgi">
+  <component name="RunManager" selected="Flask server.wsgi (MSSQL odbc)">
     <configuration name="core" type="Python.FlaskServer">
       <module name="core" />
       <option name="target" value="$PROJECT_DIR$/app.py" />
@@ -68,6 +66,49 @@
       <option name="PARENT_ENVS" value="true" />
       <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
       <option name="WORKING_DIRECTORY" value="$PROJECT_DIR$" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wsgi (MSSQL odbc)" type="Python.FlaskServer">
+      <module name="core" />
+      <option name="target" value="$PROJECT_DIR$/wsgi.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="FLASK_APP" value="wsgi.py" />
+        <env name="DC1_MSSQL" value="10.38.11.25" />
+        <env name="DC2_MSSQL" value="10.38.14.25" />
+        <env name="DC1_PREFIX" value="10.38.11" />
+        <env name="DC2_PREFIX" value="10.38.14" />
+        <env name="IP_DEFAULT_GW" value="10.38.14.1" />
+        <env name="MSSQL_PASS" value="nx2Tech911!" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
+      <option name="IS_MODULE_SDK" value="false" />
+      <option name="ADD_CONTENT_ROOTS" value="true" />
+      <option name="ADD_SOURCE_ROOTS" value="true" />
+      <EXTENSION ID="PythonCoverageRunConfigurationExtension" runner="coverage.py" />
+      <option name="launchJavascriptDebuger" value="false" />
+      <method v="2" />
+    </configuration>
+    <configuration name="wsgi (MSSQL)" type="Python.FlaskServer">
+      <module name="core" />
+      <option name="target" value="$PROJECT_DIR$/wsgi.py" />
+      <option name="targetType" value="PATH" />
+      <option name="INTERPRETER_OPTIONS" value="" />
+      <option name="PARENT_ENVS" value="true" />
+      <envs>
+        <env name="SQLALCHEMY_DATABASE_URI" value="mssql+pymssql://sa:nx2Tech911!@10.38.11.29:1433/demo" />
+        <env name="FLASK_APP" value="wsgi.py" />
+      </envs>
+      <option name="SDK_HOME" value="$PROJECT_DIR$/venv/bin/python" />
+      <option name="WORKING_DIRECTORY" value="" />
       <option name="IS_MODULE_SDK" value="false" />
       <option name="ADD_CONTENT_ROOTS" value="true" />
       <option name="ADD_SOURCE_ROOTS" value="true" />
@@ -97,6 +138,8 @@
     <list>
       <item itemvalue="Flask server.core" />
       <item itemvalue="Flask server.wsgi" />
+      <item itemvalue="Flask server.wsgi (MSSQL)" />
+      <item itemvalue="Flask server.wsgi (MSSQL odbc)" />
     </list>
   </component>
   <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
@@ -107,7 +150,15 @@
       <option name="number" value="Default" />
       <option name="presentableId" value="Default" />
       <updated>1602348505496</updated>
-      <workItem from="1602348510695" duration="17218000" />
+      <workItem from="1602348510695" duration="17915000" />
+      <workItem from="1602505061365" duration="19000" />
+      <workItem from="1602754795926" duration="48000" />
+      <workItem from="1602755255772" duration="619000" />
+      <workItem from="1602957043119" duration="1677000" />
+      <workItem from="1602993851429" duration="725000" />
+      <workItem from="1603028339127" duration="19000" />
+      <workItem from="1603298566748" duration="2996000" />
+      <workItem from="1603303404700" duration="11859000" />
     </task>
     <servers />
   </component>
@@ -115,57 +166,75 @@
     <option name="version" value="3" />
   </component>
   <component name="WindowStateProjectService">
-    <state x="2217" y="237" width="1084" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1602371378203">
-      <screen x="0" y="26" width="3840" height="1106" />
+    <state x="1691" y="191" width="1084" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog" timestamp="1603389491285">
+      <screen x="0" y="27" width="3840" height="1105" />
     </state>
     <state x="2217" y="237" width="1084" height="828" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.26.3840.1106@0.26.3840.1106" timestamp="1602371378203" />
-    <state x="2599" y="350" width="309" height="487" key="EnvironmentVariablesDialog" timestamp="1602371376668">
+    <state x="1691" y="191" key="#com.intellij.execution.impl.EditConfigurationsDialog/0.27.3840.1105@0.27.3840.1105" timestamp="1603389491285" />
+    <state x="2476" y="381" width="568" height="397" key="#com.intellij.fileTypes.FileTypeChooser" timestamp="1602393459025">
       <screen x="0" y="26" width="3840" height="1106" />
+    </state>
+    <state x="2476" y="381" width="568" height="397" key="#com.intellij.fileTypes.FileTypeChooser/0.26.3840.1106@0.26.3840.1106" timestamp="1602393459025" />
+    <state x="1997" y="308" width="712" height="519" key="EnvironmentVariablesDialog" timestamp="1603389489559">
+      <screen x="0" y="27" width="3840" height="1105" />
     </state>
     <state x="2599" y="350" width="309" height="487" key="EnvironmentVariablesDialog/0.26.3840.1106@0.26.3840.1106" timestamp="1602371376668" />
-    <state x="2542" y="337" width="424" height="485" key="FileChooserDialogImpl" timestamp="1602370343335">
+    <state x="1997" y="308" width="712" height="519" key="EnvironmentVariablesDialog/0.27.3840.1105@0.27.3840.1105" timestamp="1603389489559" />
+    <state x="1177" y="212" width="424" height="485" key="FileChooserDialogImpl" timestamp="1603028356364">
+      <screen x="0" y="27" width="3840" height="1105" />
+    </state>
+    <state x="2542" y="337" width="424" height="485" key="FileChooserDialogImpl/0.26.3840.1106@0.26.3840.1106" timestamp="1602505078358" />
+    <state x="1177" y="212" key="FileChooserDialogImpl/0.27.3840.1105@0.27.3840.1105" timestamp="1603028356364" />
+    <state width="1549" height="294" key="GridCell.Tab.0.bottom" timestamp="1603389492837">
+      <screen x="0" y="27" width="3840" height="1105" />
+    </state>
+    <state width="1568" height="364" key="GridCell.Tab.0.bottom/0.26.3840.1106@0.26.3840.1106" timestamp="1602400817208" />
+    <state width="1549" height="294" key="GridCell.Tab.0.bottom/0.27.3840.1105@0.27.3840.1105" timestamp="1603389492837" />
+    <state width="1549" height="294" key="GridCell.Tab.0.center" timestamp="1603389492836">
+      <screen x="0" y="27" width="3840" height="1105" />
+    </state>
+    <state width="1568" height="364" key="GridCell.Tab.0.center/0.26.3840.1106@0.26.3840.1106" timestamp="1602400817207" />
+    <state width="1549" height="294" key="GridCell.Tab.0.center/0.27.3840.1105@0.27.3840.1105" timestamp="1603389492836" />
+    <state width="1549" height="294" key="GridCell.Tab.0.left" timestamp="1603389492836">
+      <screen x="0" y="27" width="3840" height="1105" />
+    </state>
+    <state width="1568" height="364" key="GridCell.Tab.0.left/0.26.3840.1106@0.26.3840.1106" timestamp="1602400817207" />
+    <state width="1549" height="294" key="GridCell.Tab.0.left/0.27.3840.1105@0.27.3840.1105" timestamp="1603389492836" />
+    <state width="1549" height="294" key="GridCell.Tab.0.right" timestamp="1603389492837">
+      <screen x="0" y="27" width="3840" height="1105" />
+    </state>
+    <state width="1568" height="364" key="GridCell.Tab.0.right/0.26.3840.1106@0.26.3840.1106" timestamp="1602400817207" />
+    <state width="1549" height="294" key="GridCell.Tab.0.right/0.27.3840.1105@0.27.3840.1105" timestamp="1603389492837" />
+    <state width="1568" height="364" key="GridCell.Tab.1.bottom" timestamp="1602400817208">
       <screen x="0" y="26" width="3840" height="1106" />
     </state>
-    <state x="2542" y="337" width="424" height="485" key="FileChooserDialogImpl/0.26.3840.1106@0.26.3840.1106" timestamp="1602370343335" />
-    <state width="1568" height="295" key="GridCell.Tab.0.bottom" timestamp="1602371527475">
+    <state width="1568" height="364" key="GridCell.Tab.1.bottom/0.26.3840.1106@0.26.3840.1106" timestamp="1602400817208" />
+    <state width="1568" height="364" key="GridCell.Tab.1.center" timestamp="1602400817208">
       <screen x="0" y="26" width="3840" height="1106" />
     </state>
-    <state width="1568" height="295" key="GridCell.Tab.0.bottom/0.26.3840.1106@0.26.3840.1106" timestamp="1602371527475" />
-    <state width="1568" height="295" key="GridCell.Tab.0.center" timestamp="1602371527474">
+    <state width="1568" height="364" key="GridCell.Tab.1.center/0.26.3840.1106@0.26.3840.1106" timestamp="1602400817208" />
+    <state width="1568" height="364" key="GridCell.Tab.1.left" timestamp="1602400817208">
       <screen x="0" y="26" width="3840" height="1106" />
     </state>
-    <state width="1568" height="295" key="GridCell.Tab.0.center/0.26.3840.1106@0.26.3840.1106" timestamp="1602371527474" />
-    <state width="1568" height="295" key="GridCell.Tab.0.left" timestamp="1602371527474">
+    <state width="1568" height="364" key="GridCell.Tab.1.left/0.26.3840.1106@0.26.3840.1106" timestamp="1602400817208" />
+    <state width="1568" height="364" key="GridCell.Tab.1.right" timestamp="1602400817208">
       <screen x="0" y="26" width="3840" height="1106" />
     </state>
-    <state width="1568" height="295" key="GridCell.Tab.0.left/0.26.3840.1106@0.26.3840.1106" timestamp="1602371527474" />
-    <state width="1568" height="295" key="GridCell.Tab.0.right" timestamp="1602371527474">
-      <screen x="0" y="26" width="3840" height="1106" />
-    </state>
-    <state width="1568" height="295" key="GridCell.Tab.0.right/0.26.3840.1106@0.26.3840.1106" timestamp="1602371527474" />
-    <state width="1568" height="364" key="GridCell.Tab.1.bottom" timestamp="1602363916958">
-      <screen x="0" y="26" width="3840" height="1106" />
-    </state>
-    <state width="1568" height="364" key="GridCell.Tab.1.bottom/0.26.3840.1106@0.26.3840.1106" timestamp="1602363916958" />
-    <state width="1568" height="364" key="GridCell.Tab.1.center" timestamp="1602363916958">
-      <screen x="0" y="26" width="3840" height="1106" />
-    </state>
-    <state width="1568" height="364" key="GridCell.Tab.1.center/0.26.3840.1106@0.26.3840.1106" timestamp="1602363916958" />
-    <state width="1568" height="364" key="GridCell.Tab.1.left" timestamp="1602363916958">
-      <screen x="0" y="26" width="3840" height="1106" />
-    </state>
-    <state width="1568" height="364" key="GridCell.Tab.1.left/0.26.3840.1106@0.26.3840.1106" timestamp="1602363916958" />
-    <state width="1568" height="364" key="GridCell.Tab.1.right" timestamp="1602363916958">
-      <screen x="0" y="26" width="3840" height="1106" />
-    </state>
-    <state width="1568" height="364" key="GridCell.Tab.1.right/0.26.3840.1106@0.26.3840.1106" timestamp="1602363916958" />
+    <state width="1568" height="364" key="GridCell.Tab.1.right/0.26.3840.1106@0.26.3840.1106" timestamp="1602400817208" />
     <state width="263" height="500" key="HiddenNamespacesPopup" timestamp="1602362590439">
       <screen x="0" y="26" width="3840" height="1106" />
     </state>
     <state width="263" height="500" key="HiddenNamespacesPopup/0.26.3840.1106@0.26.3840.1106" timestamp="1602362590439" />
+    <state x="2022" y="229" width="848" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser" timestamp="1603302785215">
+      <screen x="0" y="27" width="3840" height="1105" />
+    </state>
+    <state x="2022" y="228" width="848" height="764" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.26.3840.1106@0.26.3840.1106" timestamp="1602957126832" />
+    <state x="2022" y="229" key="com.intellij.openapi.editor.actions.MultiplePasteAction$ClipboardContentChooser/0.27.3840.1105@0.27.3840.1105" timestamp="1603302785215" />
   </component>
   <component name="com.intellij.coverage.CoverageDataManagerImpl">
-    <SUITE FILE_PATH="coverage/core$wsgi.coverage" NAME="wsgi Coverage Results" MODIFIED="1602371382371" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/core$wsgi.coverage" NAME="wsgi Coverage Results" MODIFIED="1603298585228" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
+    <SUITE FILE_PATH="coverage/core$wsgi__MSSQL_odbc_.coverage" NAME="wsgi (MSSQL odbc) Coverage Results" MODIFIED="1603389492829" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
     <SUITE FILE_PATH="coverage/core$core.coverage" NAME="core Coverage Results" MODIFIED="1602370227142" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="$PROJECT_DIR$" />
+    <SUITE FILE_PATH="coverage/core$wsgi__MSSQL_.coverage" NAME="wsgi (MSSQL) Coverage Results" MODIFIED="1603380977401" SOURCE_PROVIDER="com.intellij.coverage.DefaultCoverageFileProvider" RUNNER="coverage.py" COVERAGE_BY_TEST_ENABLED="true" COVERAGE_TRACING_ENABLED="false" WORKING_DIRECTORY="" />
   </component>
 </project>

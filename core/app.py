@@ -31,7 +31,9 @@ def dashboard():
                            ip_address=request.host[:request.host.find(':')],
                            version=app_config.VERSION,
                            tasks=tasks,
-                           form=form)
+                           form=form,
+                           db_host=app_config.MSSQL_HOST,
+                           db_name=app_config.MSSQL_DB)
 
 
 if __name__ == '__main__':
