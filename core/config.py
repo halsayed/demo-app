@@ -8,7 +8,7 @@ class Config:
     SECRET_KEY = os.environ.get('SECRET_KEY') or 'super-secret-key'
     LOG_LEVEL = os.environ.get('LOG_LEVEL', logging.INFO)
 
-    VERSION = os.environ.get('VERSION', 'v4.0 Riyadh')
+    VERSION = os.environ.get('VERSION', 'v5.0')
     SQLALCHEMY_TRACK_MODIFICATIONS = False
     SQLALCHEMY_DATABASE_URI = os.environ.get('SQLALCHEMY_DATABASE_URI', 'sqlite:///tmp.db')
 
